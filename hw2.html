@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HW2</title>
     <style>
-        blockquote{
-            border: solid;
+        s-purple {
+            color:purple;
         }
     </style>
+    
 </head>
 <body>
     <header>
@@ -21,12 +22,11 @@
             <a href="hw2.html">HW2</a>
         </nav>
         <hr>
-        <h1>HW 2 Page</h1>
+        <h1><s-purple>HW 2 Page</s-purple></h1>
     </header>
     <main>
-        
         <p>
-            <blockquote>
+            <blockquote >
                 <ins>This has been added</ins> <br>
                 <del>This has been deleted</del>
             </blockquote>
@@ -176,6 +176,16 @@
                 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠛⠻⢶⣤⣀⡀⠈⢿⣄⠀⠀⣀⣀⡀⣀⣀⠤⠤⠠⠀⠀⢊⣀⣡⣴⡶⠟⠛⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
                 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⣙⡛⠷⠶⣿⣷⣤⣭⣭⣤⣤⠤⠴⠶⠶⠖⠛⠛⠋⡉⠁⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</pre>
         </div>
+        <hello-world>Hello World!</hello-world>
+        <script>
+            class HelloWorld extends HTMLElement {
+                constructor() {
+                    super();
+                    console.log("Hello world!");
+                }
+            }
+            customElements.define('hello-world', HelloWorld);
+        </script>
         
     </main>
     <footer>
