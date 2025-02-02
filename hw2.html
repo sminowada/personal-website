@@ -186,7 +186,20 @@
             }
             customElements.define('hello-world', HelloWorld);
         </script>
+        <canvas width="250" height="150">
+            Example Canvas
+        </canvas>
+        <script>
+            const canvas = document.querySelector("canvas");
+            const ctx = canvas.getContext("2d");
+            ctx.fillStyle = "teal";
+            // Add a rectangle at (10, 10) with size 100x100 pixels
+            ctx.fillRect(10, 10, 200, 100);
+        </script>
         
+        <svg width="200" height="100" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="100" cy="50" rx="100" ry="30" fill="magenta" />
+        </svg>
     </main>
     <footer>
 
