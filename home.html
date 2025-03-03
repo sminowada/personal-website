@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seiji Minowada</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script> <!--For use later with JS-->
 </head>
+
 <body>
     <header>
         <nav>
@@ -15,24 +16,30 @@
             <a href="resume.html">Resume</a>
             <a href="about.html">About Me</a>
             <a href="contact.html">Contact Me</a>
-            <!-- <a href="hw2.html">HW2</a> -->
+            <div id="toggle">
+                <img src="sun-74.png" alt="light mode" id="sun">
+                <label class="switch round">
+                    <input type="checkbox" id="toggle-switch">
+                    <span class="slider round"></span>
+                </label>
+                <img src="moon-34.png" alt="dark mode" id="moon">
+            </div>
         </nav>
-
-        
-
     </header>
     <main id="main-home">
-        
+
         <img src="IMG_0479.jpeg" alt="Image for Seiji Minowada's Website" id="main-img">
         <hgroup>
             <h1>WELCOME</h1>
             <p>To <strong>Seiji Minowada's</strong> Website</p>
             <p>A Computer Scientist, Researcher, Soccer Player, Skier, and Traveler</p>
         </hgroup>
-        
+
     </main>
     <footer>
-        <noscript>JS is not turned on!</noscript>
+        <noscript>JS is not turned on! Light and dark mode toggle will not work</noscript>
     </footer>
+    <script src="home.js"></script>
 </body>
+
 </html>
