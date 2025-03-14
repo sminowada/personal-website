@@ -41,7 +41,7 @@ let card1 = new ProjectCard({
 let card2 = new ProjectCard({
     title: 'Pantry Pal',
     description: 'Developed an application for generating recipes with pictures based on user voice input ingredients. Implemented API calls for recipe creation, image generation, and speech recognition. Validated logins and stored user profiles with recipes using MongoDB',
-    link: '',
+    link: 'https://github.com/ucsd-cse110-fa23/cse-110-project-team_3?tab=readme-ov-file',
     linkDescription: 'Github Repo',
     picture: "pantrypal.png",
     alText: "pantry pal logo image"
