@@ -188,7 +188,7 @@ body {
 }
 
 button {
-    color: color-mix(in lch longer hue, hsl(200deg 50% 80%), coral);
+    color: var(--text-color);
 }
 
 div:has(+div) {
@@ -437,4 +437,9 @@ input:focus+.slider {
     margin: 0 auto;
     width: 30dvw;
     height: 40dvh;
+}
+
+#project-buttons {
+    display: block;
+    text-align: center;
 }
