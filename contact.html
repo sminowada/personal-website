@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Contact Me</title>
+
 </head>
+
 <body>
     <header>
         <nav>
@@ -13,36 +17,46 @@
             <a href="resume.html">Resume</a>
             <a href="about.html">About Me</a>
             <a href="contact.html">Contact Me</a>
-            <a href="hw2.html">HW2</a>
+            <div id="toggle">
+                <img src="sun-74.png" alt="light mode" id="sun">
+                <label class="switch round">
+                    <input type="checkbox" id="toggle-switch">
+                    <span class="slider round"></span>
+                </label>
+                <img src="moon-34.png" alt="dark mode" id="moon">
+            </div>
         </nav>
-        <hr>
         <h1>Contact Me</h1>
     </header>
-    <main>
-        <span>
-            <img src="contact.png" alt="Contact me Photo">
-        </span>
-        <form action="URL" method="post">
-            <div>
-                <label for="name">Enter Your <b>Name</b></label>
-                <input type="text" name="name" id="name">
+    <main id="main-contact">
+        <img src="contact.png" alt="Contact me Photo" id="contact-img">
+        <form action="https://httpbin.org/post" method="POST" novalidate>
+            <input type="hidden" name="possible_bot" value="true">
+            <input type="hidden" name="form-errors" id="form-errors" value="hello">
+            <div class>
+                <label for="name">Enter Your <b>Name</b> *</label>
+                <input type="text" name="name" id="name" placeholder="John Doe" required pattern="[A-Za-z\s]+">
             </div>
             <div>
-                <label for="email">Enter Your <b>Email</b></label>
-                <input type="text" name="email" id="email">
+                <label for="email">Enter Your <b>Email</b> *</label>
+                <input type="email" name="email" id="email" placeholder="example@gmail.com" required>
             </div>
             <div>
-                <label for="question">Enter Your <b>Question</b></label>
-                <textarea name="question" id="question"></textarea>
+                <label for="comment">Enter Your <b>Comment</b></label>
+                <textarea name="comment" id="comment" placeholder="Type Here!" maxlength="200"></textarea>
             </div>
             <div>
-                <button type="submit" >Submit</button>
+                <button type="submit">Submit</button>
             </div>
+            <p id="error-msg" hidden>You have not completely filled out the form!</p>
+            <p id="info-msg"></p>
+            <p>I will try to get back to you as soon as possible after you submit the form!
+            </p>
         </form>
-        <span>I will try to get back to you as soon as possible after you submit the form!</span>
-    </main>
-    <footer>
 
-    </footer>
+    </main>
+    <script src="app.js"></script>
+    <script src="home.js"></script>
 </body>
+
 </html>

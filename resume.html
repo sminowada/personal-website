@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Resume</title>
 </head>
+
 <body>
     <header>
         <nav>
@@ -13,16 +16,21 @@
             <a href="resume.html">Resume</a>
             <a href="about.html">About Me</a>
             <a href="contact.html">Contact Me</a>
-            <a href="hw2.html">HW2</a>
+            <div id="toggle">
+                <img src="sun-74.png" alt="light mode" id="sun">
+                <label class="switch round">
+                    <input type="checkbox" id="toggle-switch">
+                    <span class="slider round"></span>
+                </label>
+                <img src="moon-34.png" alt="dark mode" id="moon">
+            </div>
         </nav>
-        <hr>
         <h1>Resume</h1>
     </header>
     <main>
-        <picture>
-            <img src="SeijiResume.png" alt="Seiji's Resume">
-        </picture>
+        <iframe class="resume" src="Seijis_Resume (1).pdf"></iframe>
     </main>
-    
+    <script src="home.js"></script>
 </body>
+
 </html>

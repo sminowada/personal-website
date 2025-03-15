@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Contact Me</title>
+    <!-- <script>
+        function validateForm() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var comment = document.getElementById("comment").value;
+            if (name == "" || email == "" || comment == "") {
+                document.getElementById("error-msg").removeAttribute("hidden");
+                return false;
+            }
+        }
+    </script> -->
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="resume.html">Resume</a>
+            <a href="about.html">About Me</a>
+            <a href="contact.html">Contact Me</a>
+            <!-- <a href="hw2.html">HW2</a> -->
+        </nav>
+        <h1>Contact Me</h1>
+    </header>
+    <main id="main-contact">
+        <img src="contact.png" alt="Contact me Photo" id="contact-img">
+        <form action="https://httpbin.org/post" method="POST" onsubmit="return validateForm()">
+            <input type="hidden" name="possible_bot" value="true">
+            <div class>
+                <label for="name">Enter Your <b>Name</b> *</label>
+                <input type="text" name="name" id="name" placeholder="John Doe" required pattern="[A-Za-z\s]+">
+            </div>
+            <div>
+                <label for="email">Enter Your <b>Email</b> *</label>
+                <input type="email" name="email" id="email" placeholder="example@gmail.com" required>
+            </div>
+            <div>
+                <label for="comment">Enter Your <b>Comment</b> *</label>
+                <textarea name="comment" id="comment" placeholder="Type Here!" maxlength="200"></textarea>
+            </div>
+            <div>
+                <button type="submit">Submit</button>
+            </div>
+            <p id="error-msg" hidden>You have not completely filled out the form!</p>
+            <p>I will try to get back to you as soon as possible after you submit the form!
+            </p>
+        </form>
+
+    </main>
+</body>
+
+</html>
