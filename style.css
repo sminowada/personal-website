@@ -195,8 +195,6 @@ div:has(+div) {
     color: hsl(205, 82%, 43%);
 }
 
-
-
 @media screen and (max-width:600px) {
     #main-home {
         flex-direction: column-reverse;
