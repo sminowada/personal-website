@@ -1,3 +1,22 @@
+async function getData() {
+    const url = "https://my-json-server.typicode.com/sminowada/personal-website/posts/1";
+    try {
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error(`Response status: ${response.status}`);
+        }
+
+        const json = await response.json();
+        return json;
+    } catch (error) {
+        console.error(error.message);
+    }
+}
+
+
+
+
+
 class ProjectCard extends HTMLElement {
     constructor({ title = 'Project Title', description = 'This is a description of the project.',
         link = "",
@@ -76,6 +95,10 @@ document.getElementById('localBtn').addEventListener('click', function () {
     document.querySelector('main').prepend(card2);
     document.querySelector('main').prepend(card1);
 
+});
+
+document.getElementById("remoteBtn").addEventListener('click', function () {
+    console.log(getData());
 });
 
 
