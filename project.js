@@ -1,5 +1,5 @@
 async function getData() {
-    const url = "https://my-json-server.typicode.com/sminowada/personal-website/projectOne";
+    const url = "https://my-json-server.typicode.com/sminowada/personal-website/projects/1";
     try {
         const response = await fetch(url);
         if (!response.ok) {
@@ -13,12 +13,11 @@ async function getData() {
     }
 }
 
-
 class ProjectCard extends HTMLElement {
     constructor({ title = 'Project Title', description = 'This is a description of the project.',
         link = "",
         linkDescription = "Click Here",
-        picture = "hello",
+        picture = "No Image Provided",
         altText = "" } = {}) {
         super();
 
@@ -96,13 +95,11 @@ document.getElementById('localBtn').addEventListener('click', function () {
 
 document.getElementById("remoteBtn").addEventListener('click', async function () {
     let projects = await getData();
-    let card1 = new ProjectCard(projects.projectOne);
+    let card1 = new ProjectCard(projects);
     let card2 = new ProjectCard(projects);
     card1.classList.add('card');
     card2.classList.add('card');
-    document.querySelector('main').prepend(card2);
+    document.querySelector('main').innerHTML = '';
     document.querySelector('main').prepend(card1);
+    document.querySelector('main').prepend(card2);
 });
-
-
-
