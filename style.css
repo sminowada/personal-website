@@ -412,32 +412,3 @@ input:focus+.slider {
     align-items: center;
     padding-top: 0px;
 }
-
-.card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    border: solid var(--text-color) 5px;
-    border-radius: 10px;
-    padding: 5px;
-    margin: 5px;
-    width: 35dvw;
-    height: 40dvw;
-}
-
-.card>* {
-    display: flex;
-    margin: 0px;
-    justify-content: center;
-}
-
-.card>picture>img {
-    margin: 0 auto;
-    width: 30dvw;
-    height: 40dvh;
-}
-
-#project-buttons {
-    display: block;
-    text-align: center;
-}

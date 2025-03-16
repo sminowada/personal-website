@@ -1,5 +1,5 @@
 async function getData() {
-    const url = "https://my-json-server.typicode.com/sminowada/personal-website/posts/1";
+    const url = "https://my-json-server.typicode.com/sminowada/personal-website/projectOne";
     try {
         const response = await fetch(url);
         if (!response.ok) {
@@ -12,9 +12,6 @@ async function getData() {
         console.error(error.message);
     }
 }
-
-
-
 
 
 class ProjectCard extends HTMLElement {
@@ -78,7 +75,7 @@ const projectTwo = {
     link: 'https://github.com/ucsd-cse110-fa23/cse-110-project-team_3?tab=readme-ov-file',
     linkDescription: 'Github Repo',
     picture: "pantrypal.png",
-    alText: "pantry pal logo image"
+    altText: "pantry pal logo image"
 };
 
 localStorage.setItem("projectOne", JSON.stringify(projectOne));
@@ -97,8 +94,14 @@ document.getElementById('localBtn').addEventListener('click', function () {
 
 });
 
-document.getElementById("remoteBtn").addEventListener('click', function () {
-    console.log(getData());
+document.getElementById("remoteBtn").addEventListener('click', async function () {
+    let projects = await getData();
+    let card1 = new ProjectCard(projects.projectOne);
+    let card2 = new ProjectCard(projects);
+    card1.classList.add('card');
+    card2.classList.add('card');
+    document.querySelector('main').prepend(card2);
+    document.querySelector('main').prepend(card1);
 });
 
 

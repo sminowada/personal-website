@@ -13,6 +13,6 @@
         "link": "https://github.com/ucsd-cse110-fa23/cse-110-project-team_3?tab=readme-ov-file",
         "linkDescription": "Github Repo",
         "picture": "pantrypal.png",
-        "alText": "pantry pal logo image"
+        "altText": "pantry pal logo image"
     }
 }
