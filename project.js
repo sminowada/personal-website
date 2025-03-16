@@ -1,5 +1,5 @@
 async function getData() {
-    const url = "https://my-json-server.typicode.com/sminowada/personal-website/projects/1";
+    const url = "https://my-json-server.typicode.com/sminowada/personal-website/projects";
     try {
         const response = await fetch(url);
         if (!response.ok) {
@@ -95,11 +95,11 @@ document.getElementById('localBtn').addEventListener('click', function () {
 
 document.getElementById("remoteBtn").addEventListener('click', async function () {
     let projects = await getData();
-    let card1 = new ProjectCard(projects);
-    let card2 = new ProjectCard(projects);
+    let card1 = new ProjectCard(projects[0]);
+    let card2 = new ProjectCard(projects[1]);
     card1.classList.add('card');
     card2.classList.add('card');
     document.querySelector('main').innerHTML = '';
-    document.querySelector('main').prepend(card1);
     document.querySelector('main').prepend(card2);
+    document.querySelector('main').prepend(card1);
 });
