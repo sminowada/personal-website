@@ -5,7 +5,7 @@
             "description": "Ensemble learning models using Hyper-Dimensional Computing for use on edge devices. Achieved greater energy efficiency and high accuracy on image classification datasets such as mnist and cifar",
             "link": "https://ieeexplore.ieee.org/abstract/document/10818094",
             "linkDescription": "IEEE Paper",
-            "picture": "inference_proposal.png",
+            "picture": "/photos/inference_proposal.png",
             "altText": "image of ensemble learning using HDC"
         },
         {
@@ -13,7 +13,7 @@
             "description": "Developed an application for generating recipes with pictures based on user voice input ingredients. Implemented API calls for recipe creation, image generation, and speech recognition. Validated logins and stored user profiles with recipes using MongoDB",
             "link": "https://github.com/ucsd-cse110-fa23/cse-110-project-team_3?tab=readme-ov-file",
             "linkDescription": "Github Repo",
-            "picture": "pantrypal.png",
+            "picture": "/photos/pantrypal.png",
             "alText": "pantry pal logo image"
         }
     ]
