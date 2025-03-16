@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="about.css">
     <title>About Me</title>
 </head>
 
@@ -29,31 +30,44 @@
     </header>
     <main id="main-about">
         <p>In my free time I enjoy surfing, playing soccer, and going skiing when there is snow</p>
-        <div id="photos">
-            <img src="surf1.jpeg" class="about-photo" alt="Surfing Picture">
-            <img src="soccer1.jpeg" class="about-photo" alt="Soccer Picture">
-            <img src="ski1.jpeg" class="about-photo" alt="Ski Picture">
-            <img src="ski2.jpeg" class="about-photo" alt="Group ski picture">
+        <div class="slideshow-container">
+
+            <img src="ski1.jpeg" class="mySlides fade">
+
+            <img src="soccer1.jpeg" class=" mySlides fade">
+
+            <img src="surf1.jpeg" class="mySlides fade">
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
         </div>
 
-        <section id="s-about">
-            <h2>Some Videos I've Created</h2>
+        <h2>Some Videos I've Created</h2>
 
-            <iframe class="embed" width="988" height="556" src="https://www.youtube.com/embed/Bj0ZjhgzAlw"
-                title="SEASON OPENER | ParkLaps"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <iframe class="embed" width="988" height="556" src="https://www.youtube.com/embed/Y4ZR5xDWKcg"
-                title="SEMESTER AT SEA 134 FALL 2024"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <!-- <video controls width="250">
+        <iframe class="embed" width="988" height="556" src="https://www.youtube.com/embed/Bj0ZjhgzAlw"
+            title="SEASON OPENER | ParkLaps"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe class="embed" width="988" height="556" src="https://www.youtube.com/embed/Y4ZR5xDWKcg"
+            title="SEMESTER AT SEA 134 FALL 2024"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <!-- <video controls width="250">
                 <source src="Mooski.mov">
             </video> -->
 
-        </section>
     </main>
     <script src="home.js"></script>
+    <script src="about.js"></script>
 </body>
 
 </html>
