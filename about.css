@@ -66,14 +66,15 @@
 }
 
 .embed {
-    width: 40vw;
+    width: 40dvw;
     height: calc(40vw * 9 / 16);
     margin: 2em;
     margin-bottom: 0;
 }
 
 .instagram {
-    margin: 0em 5em;
+    margin: 0em 2dvw;
+
 }
 
 img {
