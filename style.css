@@ -356,6 +356,10 @@ div:has(+div) {
     h1 {
         font-size: 3em;
     }
+
+    nav a {
+        font-size: 1.5em;
+    }
 }
 
 #error-msg {
