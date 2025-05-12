@@ -57,6 +57,7 @@
 #main-about {
     flex-direction: column;
     justify-content: center;
+    padding: 0;
 }
 
 .youtube-container {
