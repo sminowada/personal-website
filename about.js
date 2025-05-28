@@ -1,28 +1,46 @@
 let slideIndex = 1;
 showSlides(slideIndex);
 
-// Next/previous controls
+// Manual Controls
 function plusSlides(n) {
     showSlides(slideIndex += n);
 }
 
-// Thumbnail image controls
 function currentSlide(n) {
     showSlides(slideIndex = n);
 }
 
 function showSlides(n) {
     let i;
-    let slides = document.getElementsByClassName("mySlides");
-    let dots = document.getElementsByClassName("dot");
-    if (n > slides.length) { slideIndex = 1 }
-    if (n < 1) { slideIndex = slides.length }
+    const slides = document.getElementsByClassName("mySlides");
+    const dots = document.getElementsByClassName("dot");
+
+    if (n > slides.length) { slideIndex = 1; }
+    if (n < 1) { slideIndex = slides.length; }
+
     for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
+        slides[i].classList.remove("active");
     }
+
     for (i = 0; i < dots.length; i++) {
         dots[i].className = dots[i].className.replace(" active", "");
     }
-    slides[slideIndex - 1].style.display = "block";
+
+    slides[slideIndex - 1].classList.add("active");
     dots[slideIndex - 1].className += " active";
+}
+
+
+// Auto Slide every 5 seconds
+let autoSlide = setInterval(() => {
+    plusSlides(1);
+}, 5000);
+
+// Pause on hover
+const slideshowContainer = document.querySelector('#slideshow-container');
+if (slideshowContainer) {
+    slideshowContainer.addEventListener('mouseenter', () => clearInterval(autoSlide));
+    // slideshowContainer.addEventListener('mouseleave', () => {
+    //     autoSlide = setInterval(() => plusSlides(1), 3000);
+    // });
 }
